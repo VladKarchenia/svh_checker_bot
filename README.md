@@ -1,7 +1,7 @@
 # bmat-watcher
 
 GitHub Actions раз в 2 часа (08:00-20:00 Минск) опрашивает
-https://queue.bmat.by/api/transport/svh и ищет "Шукалович"/"Shukalovich".
+https://queue.bmat.by/api/transport/svh и ищет заданные строки (переменная `NEEDLES`).
 Результат шлёт в Telegram. При находке - сообщение и автоотключение workflow.
 
 ## Настройка
@@ -10,7 +10,7 @@ https://queue.bmat.by/api/transport/svh и ищет "Шукалович"/"Shukal
 2. Создать репозиторий на GitHub, запушить проект.
 3. Settings -> Secrets and variables -> Actions: добавить `TG_BOT_TOKEN`, `TG_CHAT_ID`.
 4. Settings -> Secrets and variables -> Actions -> Variables: добавить `NEEDLES`
-   со значением JSON-массива, например `["Шукалович", "Shukalovich"]`.
+   со значением JSON-массива, например `["строка1", "строка2"]`.
 5. Actions -> watch -> Run workflow - проверить вручную.
 
 Перезапуск после находки: Actions -> watch -> Enable workflow.

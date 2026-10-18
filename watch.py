@@ -10,7 +10,7 @@ import urllib.parse
 import urllib.request
 
 URL = "https://queue.bmat.by/api/transport/svh"
-# JSON-массив строк в переменной окружения NEEDLES, например ["Шукалович", "Shukalovich"]
+# JSON-массив строк в переменной окружения NEEDLES, например ["строка1", "строка2"]
 # Сравнение без учёта регистра
 NEEDLES = [n.lower() for n in json.loads(os.environ["NEEDLES"])]
 FOUND_FLAG = "found.flag"  # файл-маркер для workflow
