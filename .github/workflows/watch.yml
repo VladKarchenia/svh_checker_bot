@@ -3,7 +3,7 @@ name: watch
 on:
   schedule:
     # 08:00-20:00 по Минску (UTC+3) каждые 2 часа = 05:00-17:00 UTC
-    - cron: "0 5-17/2 * * *"
+    - cron: "17 5-17/2 * * *"
   workflow_dispatch:
 
 permissions:
